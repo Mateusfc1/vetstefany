@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- ╔══════════════════════════════════════════════════════════════════╗
+     ║  ★ EDITAR (1/9) — SEO E COMPARTILHAMENTO                         ║
+     ║  Troque título, descrição e URL. Esses textos aparecem no Google ║
+     ║  e na prévia do link no WhatsApp/Instagram.                      ║
+     ╚══════════════════════════════════════════════════════════════════╝ -->
+<title>Dr(a). [Nome do Profissional] | Médico(a) Veterinário(a) em [Cidade]</title>
+<meta name="description" content="Atendimento veterinário [domiciliar/clínico] em [Cidade e região]. Dr(a). [Nome do Profissional], CRMV-[UF] [Número]. Agende pelo WhatsApp.">
+<meta name="theme-color" content="#2f9e8f">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Dr(a). [Nome do Profissional] | Veterinário(a)">
+<meta property="og:description" content="Cuidado com carinho e ciência para o seu pet. Agende pelo WhatsApp.">
+<meta property="og:image" content="assets/og-image.jpg"> <!-- ★ imagem 1200x630 para a prévia do link -->
+<meta property="og:url" content="https://www.seudominio.com.br/">
+<link rel="icon" href="assets/favicon.png"> <!-- ★ favicon do cliente (logo pequena) -->
+
+<!-- Fonte: Inter via Google Fonts (leve). Para zero dependências externas, apague as 3 linhas abaixo;
+     o site usa fontes do sistema como alternativa automaticamente. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- ╔══════════════════════════════════════════════════════════════════╗
+     ║  ★ EDITAR (2/9) — DADOS ESTRUTURADOS (SEO LOCAL)                 ║
+     ║  Substitua nome, telefone, cidade, UF e links. Ajuda no Google.  ║
+     ╚══════════════════════════════════════════════════════════════════╝ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VeterinaryCare",
+  "name": "Dr(a). [Nome do Profissional] – Veterinário(a)",
+  "url": "https://www.seudominio.com.br/",
+  "telephone": "+55-00-00000-0000",
+  "image": "assets/og-image.jpg",
+  "address": { "@type": "PostalAddress", "addressLocality": "[Cidade]", "addressRegion": "[UF]", "addressCountry": "BR" },
+  "sameAs": ["https://instagram.com/seuinstagram"]
+}
+</script>
+
+<style>
+/* ╔══════════════════════════════════════════════════════════════════╗
+   ║  ★ EDITAR (3/9) — IDENTIDADE VISUAL DO CLIENTE                   ║
+   ║  Para mudar toda a paleta do site, altere SÓ estas variáveis.    ║
+   ║  Sugestões prontas (copie e cole no lugar):                      ║
+   ║   • Azul suave:  --brand:#3b82c4; --brand-dark:#2563a0;          ║
+   ║                  --brand-soft:#e8f1fa;                            ║
+   ║   • Verde:       --brand:#2f9e8f; --brand-dark:#1f7a6e;          ║
+   ║                  --brand-soft:#e6f6f3;   (padrão atual)           ║
+   ║   • Lilás:       --brand:#7c6bc4; --brand-dark:#5a4aa3;          ║
+   ║                  --brand-soft:#efecfa;                            ║
+   ╚══════════════════════════════════════════════════════════════════╝ */
+:root{
+  --brand:#2f9e8f;        /* cor principal (botões, destaques) */
+  --brand-dark:#1f7a6e;   /* hover / texto de destaque */
+  --brand-soft:#e6f6f3;   /* fundos suaves */
+  --accent:#f4a261;       /* cor de apoio (estrelas, detalhes) */
+  --ink:#1c2b2a;          /* texto principal */
+  --muted:#5b6b6a;        /* texto secundário */
+  --bg:#fbfdfc;           /* fundo geral (off-white) */
+  --card:#ffffff;
+  --line:#e3ece9;
+  --wa:#25d366;           /* verde do WhatsApp (não alterar) */
+  --radius:20px;
+  --shadow:0 10px 30px -12px rgba(31,122,110,.25);
+  --font:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;
+}
+
+/* ───── Base ───── */
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;font-family:var(--font);color:var(--ink);background:var(--bg);line-height:1.65;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{line-height:1.15;margin:0 0 .5em;letter-spacing:-.02em}
+h1{font-size:clamp(2.1rem,6vw,3.6rem);font-weight:800}
+h2{font-size:clamp(1.7rem,4vw,2.4rem);font-weight:800}
+h3{font-size:1.15rem;font-weight:700}
+p{margin:0 0 1em}
+.container{width:min(1140px,100% - 40px);margin-inline:auto}
+section{padding:clamp(56px,9vw,104px) 0}
+.eyebrow{display:inline-block;font-size:.8rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--brand-dark);background:var(--brand-soft);padding:6px 14px;border-radius:999px;margin-bottom:16px}
+.section-head{max-width:640px;margin-bottom:48px}
+.section-head p{color:var(--muted);font-size:1.05rem}
+.center{text-align:center;margin-inline:auto}
+:focus-visible{outline:3px solid var(--brand);outline-offset:3px;border-radius:8px}
+.skip{position:absolute;left:-999px;top:8px;background:#000;color:#fff;padding:8px 14px;border-radius:8px;z-index:200}
+.skip:focus{left:8px}
+
+/* ───── Botões ───── */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font:600 1rem var(--font);padding:14px 26px;border-radius:999px;border:2px solid transparent;cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s,color .2s}
+.btn svg{width:20px;height:20px;flex:none}
+.btn:hover{transform:translateY(-3px)}
+.btn-wa{background:var(--wa);color:#fff;box-shadow:0 10px 24px -10px rgba(37,211,102,.7)}
+.btn-wa:hover{background:#1ebe5a}
+.btn-ghost{border-color:var(--brand);color:var(--brand-dark);background:transparent}
+.btn-ghost:hover{background:var(--brand);color:#fff}
+.btn-sm{padding:10px 18px;font-size:.92rem}
+
+/* ───── Header ───── */
+.header{position:fixed;inset:0 0 auto 0;z-index:100;background:rgba(251,253,252,.88);backdrop-filter:saturate(1.4) blur(12px);border-bottom:1px solid transparent;transition:border-color .3s,box-shadow .3s}
+.header.scrolled{border-color:var(--line);box-shadow:0 6px 20px -14px rgba(0,0,0,.2)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.1rem}
+.logo-mark{width:38px;height:38px;border-radius:12px;background:var(--brand);color:#fff;display:grid;place-items:center}
+.logo-mark svg{width:22px;height:22px}
+/* ★ Para usar uma logo em imagem: troque o <span class="logo-mark"> por <img src="assets/logo.png" height="38" alt="Logo"> */
+.menu{display:none;list-style:none;margin:0;padding:0;gap:28px}
+.menu a{font-weight:500;color:var(--muted);transition:color .2s}
+.menu a:hover{color:var(--brand-dark)}
+.nav-cta{display:none;gap:10px}
+.burger{background:none;border:0;width:44px;height:44px;display:grid;place-items:center;cursor:pointer}
+.burger span,.burger span::before,.burger span::after{display:block;width:24px;height:2px;background:var(--ink);border-radius:2px;position:relative;transition:.3s}
+.burger span::before,.burger span::after{content:"";position:absolute;left:0}
+.burger span::before{top:-7px}.burger span::after{top:7px}
+.burger[aria-expanded="true"] span{background:transparent}
+.burger[aria-expanded="true"] span::before{top:0;transform:rotate(45deg)}
+.burger[aria-expanded="true"] span::after{top:0;transform:rotate(-45deg)}
+.mobile-menu{display:none;flex-direction:column;gap:4px;padding:12px 20px 24px;background:var(--bg);border-bottom:1px solid var(--line)}
+.mobile-menu.open{display:flex}
+.mobile-menu a{padding:12px 4px;font-weight:500;border-bottom:1px solid var(--line)}
+.mobile-menu .btn{margin-top:12px;border:0}
+@media(min-width:900px){
+  .menu,.nav-cta{display:flex}.burger,.mobile-menu{display:none!important}
+}
+
+/* ───── Hero ───── */
+.hero{padding-top:calc(72px + clamp(32px,6vw,72px));background:radial-gradient(900px 420px at 85% 0,var(--brand-soft),transparent 70%)}
+.hero-grid{display:grid;gap:40px;align-items:center}
+.hero p.lead{font-size:1.15rem;color:var(--muted);max-width:520px}
+.hero h1 em{font-style:normal;color:var(--brand)}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin:28px 0}
+.trust{display:flex;flex-wrap:wrap;gap:20px;color:var(--muted);font-size:.92rem}
+.trust span{display:flex;align-items:center;gap:8px}
+.trust svg{width:18px;height:18px;color:var(--brand)}
+/* Moldura de foto com placeholder: se a imagem não existir, aparece o fundo com patinha */
+.photo{position:relative;border-radius:32px;overflow:hidden;aspect-ratio:4/5;background:linear-gradient(160deg,var(--brand-soft),#cfeee8);box-shadow:var(--shadow);max-width:440px;margin-inline:auto;width:100%}
+.photo::before{content:"";position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%232f9e8f' opacity='.35'%3E%3Cpath d='M12 13c-2.8 0-5 2-5 4.3 0 1.5 1.2 2.7 2.7 2.7 1 0 1.6-.4 2.3-.4s1.3.4 2.3.4c1.5 0 2.7-1.2 2.7-2.7C17 15 14.8 13 12 13zM5.5 11c1.1 0 1.9-1.1 1.9-2.5S6.600 6 5.500 6 3.600 7.100 3.600 8.500 4.400 11 5.500 11zm13 0c1.100 0 1.900-1.100 1.900-2.500S19.600 6 18.500 6s-1.900 1.100-1.900 2.500.800 2.500 1.900 2.500zM9.500 9.500c1.200 0 2.100-1.300 2.100-2.800S10.700 4 9.500 4 7.400 5.200 7.400 6.700s.9 2.800 2.100 2.800zm5 0c1.200 0 2.100-1.300 2.100-2.800S15.700 4 14.500 4s-2.100 1.200-2.100 2.700.900 2.800 2.100 2.800z'/%3E%3C/svg%3E") center/40% no-repeat}
+.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.badge{position:absolute;left:16px;bottom:16px;background:#fff;border-radius:16px;padding:12px 16px;box-shadow:var(--shadow);font-size:.88rem;line-height:1.35}
+.badge strong{display:block;font-size:1rem}
+@media(min-width:900px){.hero-grid{grid-template-columns:1.1fr .9fr;gap:64px}}
+
+/* ───── Sobre ───── */
+.about{background:#fff}
+.about-grid{display:grid;gap:48px;align-items:center}
+.about .photo{aspect-ratio:1/1}
+.checks{list-style:none;padding:0;margin:24px 0;display:grid;gap:12px}
+.checks li{display:flex;gap:12px;align-items:flex-start}
+.checks svg{width:22px;height:22px;color:var(--brand);flex:none;margin-top:2px}
+.creds{display:flex;flex-wrap:wrap;gap:10px}
+.cred{background:var(--brand-soft);color:var(--brand-dark);font-weight:600;font-size:.88rem;padding:8px 14px;border-radius:12px}
+@media(min-width:900px){.about-grid{grid-template-columns:.9fr 1.1fr;gap:72px}}
+
+/* ───── Serviços ───── */
+.cards{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:28px;transition:transform .25s,box-shadow .25s,border-color .25s;display:flex;flex-direction:column}
+.card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:var(--brand)}
+.icon{width:52px;height:52px;border-radius:16px;background:var(--brand-soft);color:var(--brand-dark);display:grid;place-items:center;margin-bottom:18px;transition:background .25s,color .25s}
+.icon svg{width:26px;height:26px}
+.card:hover .icon{background:var(--brand);color:#fff}
+.card p{color:var(--muted);font-size:.96rem;flex:1}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 16px}
+.tags span{font-size:.75rem;font-weight:600;color:var(--muted);background:#f1f5f4;padding:4px 10px;border-radius:999px}
+.card .more{font-weight:600;color:var(--brand-dark);display:inline-flex;gap:6px;align-items:center}
+.card .more:hover{gap:10px}
+
+/* ───── Galeria ───── */
+.gallery{background:#fff}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(2,1fr)}
+.shot{position:relative;border-radius:18px;overflow:hidden;aspect-ratio:1/1;background:linear-gradient(160deg,var(--brand-soft),#d4efe9);cursor:pointer}
+.shot:nth-child(1),.shot:nth-child(6){grid-column:span 2;aspect-ratio:16/9}
+.shot img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.shot:hover img{transform:scale(1.07)}
+.shot figcaption{position:absolute;inset:auto 0 0 0;padding:28px 14px 12px;color:#fff;font-size:.88rem;font-weight:600;background:linear-gradient(transparent,rgba(0,0,0,.6));opacity:0;transform:translateY(8px);transition:.3s}
+.shot:hover figcaption,.shot:focus-within figcaption{opacity:1;transform:none}
+@media(hover:none){.shot figcaption{opacity:1;transform:none}}
+@media(min-width:800px){
+  .grid{grid-template-columns:repeat(3,1fr)}
+  .shot:nth-child(1),.shot:nth-child(6){grid-column:span 1;aspect-ratio:1/1}
+  .shot:nth-child(1){grid-column:span 2;aspect-ratio:auto;grid-row:span 2}
+}
+
+/* ───── Depoimentos ───── */
+.stars{color:var(--accent);letter-spacing:3px;font-size:1.05rem;margin-bottom:10px}
+.quote{font-size:1rem;color:var(--ink)}
+.author{display:flex;align-items:center;gap:12px;margin-top:auto;padding-top:14px}
+.avatar{width:44px;height:44px;border-radius:50%;background:var(--brand);color:#fff;font-weight:700;display:grid;place-items:center;flex:none}
+.author small{display:block;color:var(--muted)}
+
+/* ───── Áreas ───── */
+.areas{background:var(--brand-soft)}
+.areas-grid{display:grid;gap:32px;align-items:center}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{background:#fff;border:1px solid var(--line);padding:10px 18px;border-radius:999px;font-weight:500;display:inline-flex;gap:8px;align-items:center;transition:transform .2s,border-color .2s}
+.chip:hover{transform:translateY(-2px);border-color:var(--brand)}
+.chip svg{width:16px;height:16px;color:var(--brand)}
+.note{background:#fff;border-radius:var(--radius);padding:24px;border:1px dashed var(--brand)}
+@media(min-width:900px){.areas-grid{grid-template-columns:1.2fr .8fr;gap:56px}}
+
+/* ───── FAQ ───── */
+.faq-list{max-width:780px;margin-inline:auto;display:grid;gap:12px}
+.faq-item{background:#fff;border:1px solid var(--line);border-radius:16px;transition:border-color .2s,box-shadow .2s}
+.faq-item.open{border-color:var(--brand);box-shadow:var(--shadow)}
+.faq-q{width:100%;background:none;border:0;font:600 1.05rem var(--font);color:var(--ink);text-align:left;padding:20px 22px;display:flex;justify-content:space-between;gap:16px;align-items:center;cursor:pointer}
+.faq-q svg{width:22px;height:22px;color:var(--brand);flex:none;transition:transform .3s}
+.faq-item.open .faq-q svg{transform:rotate(45deg)}
+.faq-a{display:grid;grid-template-rows:0fr;transition:grid-template-rows .3s ease}
+.faq-item.open .faq-a{grid-template-rows:1fr}
+.faq-a > div{overflow:hidden}
+.faq-a p{padding:0 22px 20px;margin:0;color:var(--muted)}
+
+/* ───── CTA final ───── */
+.cta{padding:0 0 clamp(56px,9vw,104px)}
+.cta-box{background:linear-gradient(135deg,var(--brand),var(--brand-dark));color:#fff;border-radius:32px;padding:clamp(32px,6vw,64px);text-align:center}
+.cta-box p{opacity:.92;max-width:540px;margin-inline:auto}
+.cta-box .hero-ctas{justify-content:center;margin-bottom:0}
+.cta-box .btn-ghost{border-color:#fff;color:#fff}
+.cta-box .btn-ghost:hover{background:#fff;color:var(--brand-dark)}
+
+/* ───── Rodapé ───── */
+.footer{background:#14201f;color:#b9c7c5;padding:56px 0 28px}
+.footer-grid{display:grid;gap:32px}
+.footer h4{color:#fff;margin:0 0 12px;font-size:1rem}
+.footer a:hover{color:#fff}
+.footer ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.social{display:flex;gap:10px;margin-top:14px}
+.social a{width:42px;height:42px;border-radius:12px;background:#223130;display:grid;place-items:center;transition:background .2s,transform .2s}
+.social a:hover{background:var(--brand);transform:translateY(-3px)}
+.social svg{width:20px;height:20px;color:#fff}
+.legal{border-top:1px solid #223130;margin-top:36px;padding-top:20px;font-size:.85rem;display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
+@media(min-width:800px){.footer-grid{grid-template-columns:1.4fr 1fr 1fr}}
+
+/* ───── Botão flutuante WhatsApp ───── */
+.fab{position:fixed;right:18px;bottom:18px;z-index:90;width:60px;height:60px;border-radius:50%;background:var(--wa);display:grid;place-items:center;box-shadow:0 12px 28px -8px rgba(37,211,102,.8);transition:transform .2s}
+.fab:hover{transform:scale(1.08)}
+.fab svg{width:32px;height:32px;color:#fff}
+.fab::after{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid var(--wa);animation:pulse 2.4s infinite}
+@keyframes pulse{0%{transform:scale(1);opacity:.7}100%{transform:scale(1.6);opacity:0}}
+
+/* ───── Animação de entrada ───── */
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .7s,transform .7s}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+
+<body>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+<!-- ╔══════════════════════════════════════════════════════════════════╗
+     ║  ★ EDITAR (4/9) — HEADER                                         ║
+     ║  • Nome da marca: troque "Dr(a). [Nome]".                        ║
+     ║  • Links de WhatsApp/Instagram são preenchidos automaticamente   ║
+     ║    pelo bloco CONFIG no final do arquivo (NÃO edite o href aqui).║
+     ║  • Para remover uma seção do menu, apague o <li> dela.           ║
+     ╚══════════════════════════════════════════════════════════════════╝ -->
+<header class="header" id="header">
+  <div class="container nav">
+    <a href="#inicio" class="logo" aria-label="Início">
+      <span class="logo-mark"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 13c-2.8 0-5 2-5 4.3 0 1.5 1.2 2.7 2.7 2.7 1 0 1.6-.4 2.3-.4s1.3.4 2.3.4c1.5 0 2.7-1.2 2.7-2.7C17 15 14.8 13 12 13zM5.5 11c1.1 0 1.9-1.1 1.9-2.5S6.6 6 5.5 6 3.6 7.1 3.6 8.5 4.4 11 5.5 11zm13 0c1.1 0 1.9-1.1 1.9-2.5S19.6 6 18.5 6s-1.9 1.1-1.9 2.5.8 2.5 1.9 2.5zM9.5 9.5c1.2 0 2.1-1.3 2.1-2.8S10.7 4 9.5 4 7.4 5.2 7.4 6.7s.9 2.8 2.1 2.8zm5 0c1.2 0 2.1-1.3 2.1-2.8S15.7 4 14.5 4s-2.1 1.2-2.1 2.7.9 2.8 2.1 2.8z"/></svg></span>
+      <span>Dr(a). [Nome]</span>
+    </a>
+
+    <ul class="menu">
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#servicos">Serviços</a></li>
+      <li><a href="#galeria">Galeria</a></li>
+      <li><a href="#depoimentos">Depoimentos</a></li>
+      <li><a href="#areas">Atendimento</a></li>
+      <li><a href="#faq">Dúvidas</a></li>
+    </ul>
+
+    <div class="nav-cta">
+      <a class="btn btn-ghost btn-sm" data-instagram target="_blank" rel="noopener" href="#">Instagram</a>
+      <a class="btn btn-wa btn-sm" data-whatsapp target="_blank" rel="noopener" href="#">WhatsApp</a>
+    </div>
+
+    <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileMenu"><span></span></button>
+  </div>
+
+  <nav class="mobile-menu" id="mobileMenu" aria-label="Menu mobile">
+    <a href="#sobre">Sobre</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#galeria">Galeria</a>
+    <a href="#depoimentos">Depoimentos</a>
+    <a href="#areas">Atendimento</a>
+    <a href="#faq">Dúvidas</a>
+    <a class="btn btn-wa" data-whatsapp target="_blank" rel="noopener" href="#">Falar no WhatsApp</a>
+    <a class="btn btn-ghost" data-instagram target="_blank" rel="noopener" href="#">Ver no Instagram</a>
+  </nav>
+</header>
+
+<main id="conteudo">
+
+<!-- ╔══════════════════════════════════════════════════════════════════╗
+     ║  ★ EDITAR (5/9) — HERO                                           ║
+     ║  • Headline (h1): frase principal. Mantenha curta e com benefício║
+     ║  • Texto .lead: proposta de valor em 1–2 linhas.                 ║
+     ║  • Foto: coloque a imagem em assets/foto-hero.jpg                ║
+     ║    (vertical 4:5, ~900x1125px, em .jpg/.webp, até 150 KB).       ║
+     ║  • .trust: 3 provas rápidas (anos de experiência, CRMV, etc).    ║
+     ╚══════════════════════════════════════════════════════════════════╝ -->
+<section class="hero" id="inicio">
+  <div class="container hero-grid">
+    <div class="reveal">
+      <span class="eyebrow">Médico(a) Veterinário(a) · [Especialidade]</span>
+      <h1>Cuidado de verdade para quem é <em>da família</em>.</h1>
+      <p class="lead">Atendimento [domiciliar / clínico] com carinho, ciência e atenção individual para o seu [cão, gato ou pet exótico], em [Cidade e região].</p>
+      <div class="hero-ctas">
+        <a class="btn btn-wa" data-whatsapp target="_blank" rel="noopener" href="#">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5A11.8 11.8 0 0 0 12 0C5.400 0 .100 5.300.100 11.900c0 2.100.6 4.200 1.600 6L0 24l6.300-1.700a11.900 11.900 0 0 0 5.700 1.500h0c6.600 0 11.900-5.300 11.900-11.900 0-3.200-1.200-6.200-3.400-8.400zM12 21.800a9.900 9.900 0 0 1-5-1.400l-.4-.2-3.700 1 1-3.600-.2-.4a9.900 9.900 0 0 1-1.500-5.300C2.200 6.400 6.600 2 12 2c2.600 0 5.100 1 7 2.900a9.800 9.800 0 0 1 2.900 7c0 5.400-4.400 9.900-9.900 9.900zm5.400-7.400c-.3-.1-1.800-.9-2-1s-.5-.1-.7.100-.8 1-1 1.200-.4.200-.7.100a8 8 0 0 1-4-3.500c-.3-.5.300-.5.900-1.600.1-.2.100-.4 0-.5l-.9-2.200c-.2-.6-.5-.5-.7-.5h-.6a1.200 1.200 0 0 0-.9.400 3.700 3.700 0 0 0-1.100 2.700 6.400 6.400 0 0 0 1.400 3.400 14.700 14.700 0 0 0 5.700 5c2.100.9 2.900 1 4 .8a3.400 3.400 0 0 0 2.200-1.600 2.700 2.700 0 0 0 .2-1.600c-.1-.1-.3-.2-.6-.3z"/></svg>
+          Falar no WhatsApp
+        </a>
+        <a class="btn btn-ghost" data-instagram target="_blank" rel="noopener" href="#">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.500" cy="6.500" r="1" fill="currentColor"/></svg>
+          Ver no Instagram
+        </a>
+      </div>
+      <div class="trust">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.200"><path d="M20 6 9 17l-5-5"/></svg>CRMV-[UF] [Número]</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.200"><path d="M20 6 9 17l-5-5"/></svg>[X]+ anos de experiência</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.200"><path d="M20 6 9 17l-5-5"/></svg>+[N] pets atendidos</span>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <div class="photo">
+        <!-- ★ FOTO HERO: assets/foto-hero.jpg (se não existir, aparece o placeholder com patinha) -->
+        <img src="imagens\vet03.png" alt="Dr(a). [Nome do Profissional] com um paciente" width="900" height="1125" fetchpriority="high" onerror="this.remove()">
+        <div class="badge"><strong>Dr(a). [Nome do Profissional]</strong>Veterinário(a) · CRMV-[UF] [Número]</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ╔══════════════════════════════════════════════════════════════════╗
+     ║  ★ EDITAR (6/9) — SOBRE                                          ║
+     ║  • Biografia: 2 parágrafos curtos, em primeira pessoa.           ║
+     ║  • Lista de diferenciais (.checks): 3 a 5 itens.                 ║
+     ║  • Certificações (.cred): formação, pós, cursos, associações.    ║
+     ║  • Foto: assets/foto-sobre.jpg (quadrada, ~800x800px).           ║
+     ╚══════════════════════════════════════════════════════════════════╝ -->
+<section class="about" id="sobre">
+  <div class="container about-grid">
+    <div class="photo reveal">
+      <img src="imagens\vet02.png" alt="Retrato profissional de Dr(a). [Nome]" width="800" height="800" loading="lazy" onerror="this.remove()">
+    </div>
+    <div class="reveal">
+      <span class="eyebrow">Sobre mim</span>
+      <h2>Prazer, sou Dr(a). [Nome do Profissional].</h2>
+      <p>[Escreva aqui sua história: por que escolheu a veterinária, onde se formou e o que move seu trabalho. Ex.: "Sou formado(a) pela [Universidade] e atuo há [X] anos com [especialidade]..."]</p>
+      <p>[Segundo parágrafo: filosofia de atendimento. Ex.: "Acredito que cada pet é único e merece um olhar atento, sem pressa e com explicações claras para o tutor."]</p>
+      <ul class="checks">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.200"><circle cx="12" cy="12" r="10"/><path d="m8 12 3 3 5-6"/></svg>[Diferencial 1 — ex.: atendimento sem estresse, no conforto do lar]</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.200"><circle cx="12" cy="12" r="10"/><path d="m8 12 3 3 5-6"/></svg>[Diferencial 2 — ex.: tempo de consulta de 60 minutos]</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.200"><circle cx="12" cy="12" r="10"/><path d="m8 12 3 3 5-6"/></svg>[Diferencial 3 — ex.: acompanhamento pelo WhatsApp após a consulta]</li>
+      </ul>
+      <div class="creds">
+        <span class="cred">CRMV-[UF] [Número]</span>
+        <span class="cred">[Graduação — Universidade]</span>
+        <span class="cred">[Pós-graduação / Residência]</span>
+        <span class="cred">[Curso ou certificação]</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ╔══════════════════════════════════════════════════════════════════╗
+     ║  ★ EDITAR (7/9) — SERVIÇOS                                       ║
+     ║  Cada <article class="card"> é um serviço. Para adicionar,       ║
+     ║  copie um card inteiro; para remover, apague.                    ║
+     ║  Em cada card edite: <h3> título, <p> descrição, <span> tags e   ║
+     ║  o parâmetro ?text= no data-msg (mensagem pré-pronta que abre no ║
+     ║  WhatsApp ao clicar em "Agendar").                               ║
+     ║  Ícones: troque o <svg> por outro (ex.: lucide.dev, copie o SVG).║
+     ╚══════════════════════════════════════════════════════════════════╝ -->
+<section id="servicos">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Serviços</span>
+      <h2>Como posso cuidar do seu pet</h2>
+      <p>Atendimentos pensados para a saúde e o bem-estar do seu companheiro, do filhote ao idoso.</p>
+    </div>
+
+    <div class="cards">
+      <article class="card reveal">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 11 9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg></div>
+        <h3>Consulta domiciliar</h3>
+        <p>Atendimento completo no conforto da sua casa, reduzindo o estresse do seu pet e do tutor.</p>
+        <div class="tags"><span>Sem estresse</span><span>Cães e gatos</span></div>
+        <a class="more" data-whatsapp data-msg="Olá! Gostaria de agendar uma consulta domiciliar." target="_blank" rel="noopener" href="#">Agendar <span>→</span></a>
+      </article>
+
+      <article class="card reveal">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4"/><path d="M12 17h.01"/><path d="M10.300 3.900 1.800 18a2 2 0 0 0 1.700 3h17a2 2 0 0 0 1.700-3L13.700 3.900a2 2 0 0 0-3.400 0z"/></svg></div>
+        <h3>Emergência</h3>
+        <p>Atendimento rápido para situações urgentes, com orientação imediata e encaminhamento quando necessário.</p>
+        <div class="tags"><span>Urgência</span><span>[Horário]</span></div>
+        <a class="more" data-whatsapp data-msg="Olá! Preciso de atendimento de emergência para meu pet." target="_blank" rel="noopener" href="#">Chamar agora <span>→</span></a>
+      </article>
+
+      <article class="card reveal">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 2 4 4"/><path d="m17 7 3-3"/><path d="M19 9 8.700 19.300a1 1 0 0 1-1.400 0L4.700 16.700a1 1 0 0 1 0-1.400L15 5"/><path d="m9 11 4 4"/><path d="m5 19-3 3"/></svg></div>
+        <h3>Vacinação e prevenção</h3>
+        <p>Protocolos vacinais, vermifugação e controle de pulgas e carrapatos, adaptados à rotina do seu pet.</p>
+        <div class="tags"><span>Filhotes</span><span>Adultos</span><span>Check-up</span></div>
+        <a class="more" data-whatsapp data-msg="Olá! Quero saber sobre vacinação para meu pet." target="_blank" rel="noopener" href="#">Agendar <span>→</span></a>
+      </article>
+
+      <article class="card reveal">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.800 6.100C15.500 5 17 4.500 19 2c1 2 2 4.200 2 8 0 5.500-4.800 10-10 10z"/><path d="M2 21c0-3 1.900-5.500 6-6.500"/></svg></div>
+        <h3>Pets exóticos</h3>
+        <p>Avaliação e cuidados para aves, roedores, coelhos e répteis, com conhecimento específico de cada espécie.</p>
+        <div class="tags"><span>Aves</span><span>Roedores</span><span>Répteis</span></div>
+        <a class="more" data-whatsapp data-msg="Olá! Tenho um pet exótico e gostaria de agendar atendimento." target="_blank" rel="noopener" href="#">Agendar <span>→</span></a>
+      </article>
+
+      <article class="card reveal">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.500-1.500 3-3.200 3-5.500A5.500 5.500 0 0 0 16.500 3c-1.800 0-3 .5-4.500 2-1.500-1.500-2.700-2-4.500-2A5.500 5.500 0 0 0 2 8.500c0 2.300 1.500 4 3 5.500l7 7z"/></svg></div>
+        <h3>[Serviço 5 — ex.: Geriatria]</h3>
+        <p>[Descreva o serviço em até 2 linhas: o que é e qual benefício traz ao pet e ao tutor.]</p>
+        <div class="tags"><span>[Tag]</span><span>[Tag]</span></div>
+        <a class="more" data-whatsapp data-msg="Olá! Gostaria de saber mais sobre [serviço]." target="_blank" rel="noopener" href="#">Saber mais <span>→</span></a>
+      </article>
+
+      <article class="card reveal">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+        <h3>Orientação ao tutor</h3>
+        <p>Tire dúvidas sobre alimentação, comportamento e rotina. Um suporte próximo para o dia a dia com o seu pet.</p>
+        <div class="tags"><span>Online</span><span>Rápido</span></div>
+        <a class="more" data-whatsapp data-msg="Olá! Tenho uma dúvida sobre meu pet." target="_blank" rel="noopener" href="#">Conversar <span>→</span></a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ╔══════════════════════════════════════════════════════════════════╗
+     ║  ★ EDITAR (8/9) — GALERIA, DEPOIMENTOS, ÁREAS E FAQ              ║
+     ║  GALERIA: fotos em assets/galeria-1.jpg ... galeria-6.jpg        ║
+     ║   (quadradas ~800x800, WebP/JPG até 120 KB cada). Edite o alt e  ║
+     ║   a <figcaption>. Use apenas fotos com AUTORIZAÇÃO dos tutores.  ║
+     ║  DEPOIMENTOS: use apenas avaliações REAIS (Google, WhatsApp, com ║
+     ║   permissão). Troque nome, pet, texto e inicial do avatar.       ║
+     ║  ÁREAS: um <span class="chip"> por município/bairro atendido.    ║
+     ║  FAQ: edite as perguntas e respostas (ajuste preços, prazos...). ║
+     ╚══════════════════════════════════════════════════════════════════╝ -->
+<section class="gallery" id="galeria">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Galeria</span>
+      <h2>Pets que já passaram por aqui</h2>
+      <p>Momentos reais de cuidado, recuperação e muito carinho.</p>
+    </div>
+    <div class="grid">
+      <figure class="shot reveal" style="margin:0"><img src="imagens\vet01.png" alt="[Descreva a foto 1]" loading="lazy" onerror="this.remove()"><figcaption>[Legenda — ex.: Thor, recuperado após cirurgia]</figcaption></figure>
+      <figure class="shot reveal" style="margin:0"><img src="imagens\vet04.png" alt="[Descreva a foto 2]" loading="lazy" onerror="this.remove()"><figcaption>[Legenda 2]</figcaption></figure>
+      <figure class="shot reveal" style="margin:0"><img src="imagens\vet05.png" alt="[Descreva a foto 3]" loading="lazy" onerror="this.remove()"><figcaption>[Legenda 3]</figcaption></figure>
+      <figure class="shot reveal" style="margin:0"><img src="imagens\vet06.png" alt="[Descreva a foto 4]" loading="lazy" onerror="this.remove()"><figcaption>[Legenda 4]</figcaption></figure>
+      <figure class="shot reveal" style="margin:0"><img src="imagens\vet07.png" alt="[Descreva a foto 5]" loading="lazy" onerror="this.remove()"><figcaption>[Legenda 5]</figcaption></figure>
+      <figure class="shot reveal" style="margin:0"><img src="imagens\vet02.png" alt="[Descreva a foto 6]" loading="lazy" onerror="this.remove()"><figcaption>[Legenda 6]</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="depoimentos">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Depoimentos</span>
+      <h2>Tutores que confiam</h2>
+      <p>A melhor propaganda é a confiança de quem já viu o cuidado de perto.</p>
+    </div>
+    <div class="cards">
+      <article class="card reveal">
+        <div class="stars" aria-label="5 estrelas">★★★★★</div>
+        <p class="quote">“[Depoimento real do cliente 1. Ideal: 2 a 3 linhas, citando o resultado ou a experiência.]”</p>
+        <div class="author"><span class="avatar">M</span><div><strong>[Nome do Tutor]</strong><small>Tutor(a) do(a) [Nome do Pet]</small></div></div>
+      </article>
+      <article class="card reveal">
+        <div class="stars" aria-label="5 estrelas">★★★★★</div>
+        <p class="quote">“[Depoimento real do cliente 2.]”</p>
+        <div class="author"><span class="avatar">A</span><div><strong>[Nome do Tutor]</strong><small>Tutor(a) do(a) [Nome do Pet]</small></div></div>
+      </article>
+      <article class="card reveal">
+        <div class="stars" aria-label="5 estrelas">★★★★★</div>
+        <p class="quote">“[Depoimento real do cliente 3.]”</p>
+        <div class="author"><span class="avatar">R</span><div><strong>[Nome do Tutor]</strong><small>Tutor(a) do(a) [Nome do Pet]</small></div></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="areas" id="areas">
+  <div class="container areas-grid">
+    <div class="reveal">
+      <span class="eyebrow">Áreas de atendimento</span>
+      <h2>Onde eu atendo</h2>
+      <p style="color:var(--muted)">Atendimento [domiciliar / em clínica] nas regiões abaixo. Não encontrou a sua? Fale comigo, posso verificar a disponibilidade.</p>
+      <div class="chips">
+        <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>[Município / Bairro 1]</span>
+        <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>[Município / Bairro 2]</span>
+        <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>[Município / Bairro 3]</span>
+        <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>[Município / Bairro 4]</span>
+        <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>[Município / Bairro 5]</span>
+      </div>
+    </div>
+    <div class="note reveal">
+      <h3>Horários de atendimento</h3>
+      <p style="color:var(--muted);margin:0">[Seg a Sex, 8h–18h · Sáb, 8h–12h]<br>[Emergências: informe aqui a disponibilidade]</p>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="container">
+    <div class="section-head center reveal" style="text-align:center">
+      <span class="eyebrow">Dúvidas frequentes</span>
+      <h2>Perguntas e respostas</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false">Como funciona a consulta domiciliar?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.200" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button>
+        <div class="faq-a"><div><p>[Explique o passo a passo: agendamento, deslocamento, duração e o que o tutor precisa preparar.]</p></div></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false">Quais animais você atende?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.200" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button>
+        <div class="faq-a"><div><p>[Liste as espécies: cães, gatos, aves, roedores, coelhos, répteis...]</p></div></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false">Quanto custa a consulta?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.200" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button>
+        <div class="faq-a"><div><p>[Informe o valor ou a faixa, formas de pagamento e se há taxa de deslocamento. Ou: "Os valores variam conforme o serviço e a região. Chame no WhatsApp para um orçamento."]</p></div></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false">Atende emergências e fora do horário?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.200" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button>
+        <div class="faq-a"><div><p>[Explique a disponibilidade e o que fazer em casos graves fora do horário, como o hospital veterinário 24h de referência.]</p></div></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false">Com que frequência devo vacinar meu pet?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.200" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button>
+        <div class="faq-a"><div><p>[Resposta geral e convite para avaliação individual: o protocolo depende da idade, espécie e histórico do pet.]</p></div></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false">Como agendo um atendimento?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.200" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button>
+        <div class="faq-a"><div><p>É simples: clique em “Falar no WhatsApp”, conte um pouco sobre o seu pet e combinamos o melhor dia e horário.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container">
+    <div class="cta-box reveal">
+      <h2>Vamos cuidar do seu pet?</h2>
+      <p>Chame no WhatsApp e agende o atendimento. Resposta rápida e sem compromisso.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-wa" data-whatsapp target="_blank" rel="noopener" href="#">Falar no WhatsApp</a>
+        <a class="btn btn-ghost" data-instagram target="_blank" rel="noopener" href="#">Ver no Instagram</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ╔══════════════════════════════════════════════════════════════════╗
+     ║  ★ EDITAR (9/9) — RODAPÉ                                         ║
+     ║  Troque nome, CRMV, cidade, e-mail (opcional) e endereço.        ║
+     ║  Se não houver e-mail/endereço, apague o <li> correspondente.    ║
+     ╚══════════════════════════════════════════════════════════════════╝ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Dr(a). [Nome do Profissional]</h4>
+        <p>Médico(a) Veterinário(a) · CRMV-[UF] [Número]<br>[Especialidade] em [Cidade e região].</p>
+        <div class="social">
+          <a data-instagram target="_blank" rel="noopener" href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.500" cy="6.500" r="1" fill="currentColor"/></svg></a>
+          <a data-whatsapp target="_blank" rel="noopener" href="#" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.500 3.500A11.800 11.800 0 0 0 12 0C5.400 0 .1 5.300.1 11.900c0 2.100.6 4.200 1.600 6L0 24l6.300-1.700a11.900 11.900 0 0 0 5.700 1.500c6.600 0 11.900-5.300 11.900-11.900 0-3.200-1.200-6.200-3.400-8.400z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#depoimentos">Depoimentos</a></li>
+          <li><a href="#faq">Dúvidas</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <ul>
+          <li><a data-whatsapp target="_blank" rel="noopener" href="#" id="footerPhone">WhatsApp</a></li>
+          <li><a data-instagram target="_blank" rel="noopener" href="#" id="footerInsta">Instagram</a></li>
+          <li><a href="mailto:contato@seudominio.com.br">contato@seudominio.com.br</a></li> <!-- ★ e-mail (opcional) -->
+          <li>[Cidade – UF]</li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <span>© <span id="year"></span> Dr(a). [Nome do Profissional]. Todos os direitos reservados.</span>
+      <span>CRMV-[UF] [Número]</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Botão flutuante do WhatsApp -->
+<a class="fab" data-whatsapp target="_blank" rel="noopener" href="#" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.500 3.500A11.800 11.800 0 0 0 12 0C5.400 0 .1 5.300.1 11.900c0 2.100.6 4.200 1.600 6L0 24l6.300-1.700a11.900 11.900 0 0 0 5.700 1.500c6.600 0 11.900-5.300 11.900-11.900 0-3.200-1.200-6.200-3.400-8.400zM12 21.800a9.900 9.900 0 0 1-5-1.400l-.4-.2-3.700 1 1-3.600-.2-.4a9.900 9.900 0 0 1-1.500-5.300C2.200 6.400 6.600 2 12 2c2.600 0 5.100 1 7 2.900a9.800 9.800 0 0 1 2.900 7c0 5.400-4.400 9.900-9.900 9.900zm5.400-7.400c-.3-.1-1.800-.9-2-1s-.5-.1-.7.100-.8 1-1 1.200-.4.200-.7.100a8 8 0 0 1-4-3.500c-.3-.5.300-.5.900-1.600.1-.2.100-.4 0-.5l-.9-2.200c-.2-.6-.5-.5-.7-.5h-.6a1.200 1.200 0 0 0-.9.400 3.700 3.700 0 0 0-1.100 2.700 6.400 6.400 0 0 0 1.400 3.400 14.700 14.700 0 0 0 5.700 5c2.100.9 2.900 1 4 .8a3.400 3.400 0 0 0 2.200-1.600 2.700 2.700 0 0 0 .2-1.600c-.1-.1-.3-.2-.6-.3z"/></svg>
+</a>
+
+<script>
+/* ╔══════════════════════════════════════════════════════════════════╗
+   ║  ★★★ ZONA PRINCIPAL DE EDIÇÃO (JS) — CONFIGURAÇÃO DO CLIENTE ★★★ ║
+   ║  Este é o ÚNICO bloco de JS que você precisa editar por cliente. ║
+   ║  Ele preenche automaticamente TODOS os botões de WhatsApp e      ║
+   ║  Instagram do site (header, hero, serviços, rodapé e flutuante). ║
+   ╚══════════════════════════════════════════════════════════════════╝ */
+const CONFIG = {
+  // WhatsApp com DDI + DDD + número, SÓ NÚMEROS. Ex.: Brasil, RJ → "5521999999999"
+  whatsappNumber: "5500000000000",
+
+  // Mensagem padrão que abre no WhatsApp (botões sem mensagem própria)
+  whatsappMessage: "Olá! Vi seu site e gostaria de agendar um atendimento para o meu pet.",
+
+  // Apenas o @usuário do Instagram, SEM o "@" e SEM link. Ex.: "dra.maria.vet"
+  instagramUser: "seuinstagram",
+
+  // Texto exibido no rodapé no lugar de "WhatsApp" (ex.: "(21) 99999-9999")
+  phoneLabel: "(00) 00000-0000",
+
+  // Texto exibido no rodapé no lugar de "Instagram" (ex.: "@dra.maria.vet")
+  instagramLabel: "@seuinstagram"
+};
+
+/* ───────── DAQUI PARA BAIXO NÃO PRECISA EDITAR ───────── */
+
+// 1) Preenche links de WhatsApp e Instagram
+(function applyLinks(){
+  const wa = n => "https://wa.me/" + CONFIG.whatsappNumber + "?text=" + encodeURIComponent(n || CONFIG.whatsappMessage);
+  document.querySelectorAll("[data-whatsapp]").forEach(a => { a.href = wa(a.dataset.msg); });
+  document.querySelectorAll("[data-instagram]").forEach(a => { a.href = "https://instagram.com/" + CONFIG.instagramUser; });
+  const p = document.getElementById("footerPhone"), i = document.getElementById("footerInsta");
+  if (p) p.textContent = CONFIG.phoneLabel;
+  if (i) i.textContent = CONFIG.instagramLabel;
+  document.getElementById("year").textContent = new Date().getFullYear();
+})();
+
+// 2) Menu mobile
+(function menu(){
+  const b = document.getElementById("burger"), m = document.getElementById("mobileMenu");
+  const close = () => { m.classList.remove("open"); b.setAttribute("aria-expanded","false"); };
+  b.addEventListener("click", () => {
+    const open = m.classList.toggle("open");
+    b.setAttribute("aria-expanded", open);
+  });
+  m.querySelectorAll("a").forEach(a => a.addEventListener("click", close));
+  document.addEventListener("keydown", e => { if (e.key === "Escape") close(); });
+})();
+
+// 3) Sombra do header ao rolar
+(function header(){
+  const h = document.getElementById("header");
+  const on = () => h.classList.toggle("scrolled", window.scrollY > 10);
+  on(); window.addEventListener("scroll", on, {passive:true});
+})();
+
+// 4) FAQ (acordeão — um item aberto por vez)
+(function faq(){
+  const items = document.querySelectorAll(".faq-item");
+  items.forEach(item => {
+    item.querySelector(".faq-q").addEventListener("click", () => {
+      const willOpen = !item.classList.contains("open");
+      items.forEach(i => { i.classList.remove("open"); i.querySelector(".faq-q").setAttribute("aria-expanded","false"); });
+      if (willOpen) { item.classList.add("open"); item.querySelector(".faq-q").setAttribute("aria-expanded","true"); }
+    });
+  });
+})();
+
+// 5) Animação de entrada ao rolar
+(function reveal(){
+  const els = document.querySelectorAll(".reveal");
+  if (!("IntersectionObserver" in window)) { els.forEach(e => e.classList.add("in")); return; }
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); } });
+  }, {threshold:.12});
+  els.forEach(e => io.observe(e));
+})();
+</script>
+</body>
+</html>
